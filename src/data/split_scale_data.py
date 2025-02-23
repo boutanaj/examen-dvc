@@ -7,8 +7,8 @@ from sklearn.preprocessing import MinMaxScaler
 
 def main():
     df = pd.read_csv("data/raw_data/raw.csv", index_col=0)
-    if 'date' in df.columns:
-        df.drop('date', axis=1, inplace=True)
+    #if 'date' in df.columns:
+       # df.drop('date', axis=1, inplace=True)
     X = df.drop("silica_concentrate", axis=1)
     y = df['silica_concentrate']
 
