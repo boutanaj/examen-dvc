@@ -1,17 +1,11 @@
 stages:
   prepare:
-    cmd: python src/data/import_raw_data.py
-    deps:
-    - src/data/import_raw_data.py
-    outs:
-    - data/raw_data
-  split_normalize:
     cmd: python src/data/split_scale_data.py
     deps:
-    - data/raw_data/raw.csv
+    - data/raw_data/
     - src/data/split_scale_data.py
     outs:
-    - data/processed_data
+    - data/processed_data/
   gridsearch:
     cmd: python src/models/gridsearch.py
     deps:

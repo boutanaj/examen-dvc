@@ -1,31 +1,19 @@
 schema: '2.0'
 stages:
   prepare:
-    cmd: python src/data/import_raw_data.py
+    cmd: python src/data/split_scale_data.py
     deps:
-    - path: src/data/import_raw_data.py
-      hash: md5
-      md5: 51bbf5d932c12a39e485f578c74db627
-      size: 1728
-    outs:
-    - path: data/raw_data
+    - path: data/raw_data/
       hash: md5
       md5: 41dee78430cbebe25be9986bbb599d4a.dir
       size: 333757
       nfiles: 1
-  split_normalize:
-    cmd: python src/data/split_scale_data.py
-    deps:
-    - path: data/raw_data/raw.csv
-      hash: md5
-      md5: 617b56af2992376d5c3e91ad80823898
-      size: 333757
     - path: src/data/split_scale_data.py
       hash: md5
       md5: acbcb061401a9c63cecac0f345384763
       size: 1693
     outs:
-    - path: data/processed_data
+    - path: data/processed_data/
       hash: md5
       md5: 69d9404f0fcd29e371854fc376a26550.dir
       size: 572569
