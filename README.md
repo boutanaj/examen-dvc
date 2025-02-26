@@ -80,7 +80,7 @@ Les données sont téléchargées à travers le lien suivant : https://datascien
 
 
 
-    * **Nettoyer le cache et les données (optionnel, mais recommandé) :**
+    * **Nettoyer le cache et les données :**
 
         ```bash
         rm -rf data/raw_data
