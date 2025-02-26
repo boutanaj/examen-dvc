@@ -16,11 +16,10 @@ stages:
   split_normalize:
     cmd: python src/data/split_scale_data.py
     deps:
-    - path: data/raw_data
+    - path: data/raw_data/raw.csv
       hash: md5
-      md5: 41dee78430cbebe25be9986bbb599d4a.dir
+      md5: 617b56af2992376d5c3e91ad80823898
       size: 333757
-      nfiles: 1
     - path: src/data/split_scale_data.py
       hash: md5
       md5: acbcb061401a9c63cecac0f345384763
