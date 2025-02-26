@@ -1,5 +1,5 @@
 # Examen DVC et Dagshub
-Dans ce dépôt vous trouverez l'architecture proposé pour mettre en place la solution de l'examen.
+Dans ce dépôt vous trouverez l'architecture proposée pour mettre en place la solution de l'examen.
 
 ## Architecture Readme:
 
@@ -12,7 +12,7 @@ Dans ce dépôt vous trouverez l'architecture proposé pour mettre en place la s
 │   │   └── raw_data          <-  contient le jeux de données initial importé
 │   │     
 │   ├── metrics               <-  contient le fichier scores.json qui calcule r2 et mse par le script 
-|   |                             "evaluate_model.py"
+|   |                             evaluate_model.py
 │   │
 │   ├── models                <-  contient les fichiers best_params.pkl et trained_model.joblib résultat 
 |   |                              respectivement des scripts gridsearch.py et train_model.py
@@ -33,10 +33,11 @@ Dans ce dépôt vous trouverez l'architecture proposé pour mettre en place la s
 
 Ce document décrit les étapes à suivre pour reproduire la pipeline DVC de ce projet.
 
-Les données sont téléchargées à travers le lien suivant : https://datascientest-mlops.s3.eu-west-1.amazonaws.com/mlops_dvc_fr/raw.csv.
-
 
 ### Prérequis
+
+Les données sont téléchargées à travers le lien suivant : https://datascientest-mlops.s3.eu-west-1.amazonaws.com/mlops_dvc_fr/raw.csv.
+
 
 * Python 3.6+
 * DVC (Data Version Control)
@@ -62,6 +63,7 @@ Les données sont téléchargées à travers le lien suivant : https://datascien
 3.  **Installation des packages nécessaires :**
 
     ```bash
+    cd examen-dvc
     pip install -r requirements.txt
     ```
 
